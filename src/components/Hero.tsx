@@ -101,7 +101,7 @@ export default function Hero() {
             </p>
             <p className="text-[#e8eaf0] text-lg mb-8 leading-relaxed max-w-lg">
               Senior IT Manager & Digital Transformation Leader with{" "}
-              <span className="text-[#00d4ff] font-semibold">14+ years</span> 
+              <span className="text-[#00d4ff] font-semibold">14+ years</span>{" "}
               of turning impossible problems into elegant solutions. I don&apos;t
               fear change — I architect it.
             </p>
