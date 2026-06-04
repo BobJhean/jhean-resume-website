@@ -9,7 +9,7 @@ export default function Footer() {
           alt="Jhean Lamprecht — The Solutionist"
           width={120}
           height={80}
-          className="h-8 w-auto opacity-80"
+          className="h-32 w-auto opacity-80"
         />
         <div>
           Johannesburg, South Africa · jhean@bluethoughtech.com
