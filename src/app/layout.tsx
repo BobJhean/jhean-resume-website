@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: "Jhean Lamprecht",
     images: [
       {
-        url: "/og-banner.png",
+        url: "/og-banner.jpg",
         width: 1456,
         height: 816,
         alt: "Jhean Lamprecht — The Solutionist | Blue Thought Technologies",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Jhean Lamprecht — The Solutionist",
     description:
       "Senior IT Manager & Digital Transformation Leader. 14+ years turning impossible problems into elegant solutions.",
-    images: ["/og-banner.png"],
+    images: ["/og-banner.jpg"],
   },
 };
 
