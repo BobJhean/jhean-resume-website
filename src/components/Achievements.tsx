@@ -3,7 +3,7 @@ const achievements = [
     icon: "🚀",
     title: "Zero-Downtime Migration",
     description:
-      "Migrated Computicket's mission-critical platform from 20-year-old monolith to microservices while serving millions of live users — not one second of downtime over 18 months.",
+      "Migrated Computicket's mission-critical platform from 20-year-old monolith to event driven while serving millions of live users — not one second of downtime over 18 months.",
     metric: "0 min downtime",
     color: "from-[#00d4ff]/20 to-transparent",
     border: "border-[#00d4ff]/30",
