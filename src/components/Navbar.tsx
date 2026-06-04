@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const links = [
   { label: "About", href: "#about" },
@@ -28,9 +29,15 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-white font-bold text-lg tracking-tight">
-          <span className="gradient-text">JL</span>
-          <span className="text-[#8892a4] ml-1 font-light">/ Solutionist</span>
+        <a href="#" className="flex items-center">
+          <Image
+            src="/logo.png"
+            alt="Jhean Lamprecht — The Solutionist"
+            width={160}
+            height={107}
+            className="h-10 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop nav */}
