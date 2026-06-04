@@ -92,7 +92,7 @@ export default function Hero() {
                 alt="Jhean Lamprecht — The Solutionist"
                 width={320}
                 height={213}
-                className="w-full max-w-[768px] h-auto"
+                className="w-full max-w-[500px] h-auto"
                 priority
               />
             </div>
