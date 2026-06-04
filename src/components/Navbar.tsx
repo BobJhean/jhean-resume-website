@@ -35,7 +35,7 @@ export default function Navbar() {
             alt="Jhean Lamprecht — The Solutionist"
             width={180}
             height={120}
-            className="h-9 w-auto"
+            className="h-auto w-48"
             priority
           />
         </a>
