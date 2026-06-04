@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-banner.jpg",
-        width: 1456,
-        height: 816,
+        width: 1200,
+        height: 628,
         alt: "Jhean Lamprecht — The Solutionist | Blue Thought Technologies",
       },
     ],
