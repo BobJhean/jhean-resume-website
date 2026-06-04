@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     siteName: "Jhean Lamprecht",
     images: [
       {
-        url: "/og",
-        width: 1200,
-        height: 630,
+        url: "/profile.jpg",
+        width: 800,
+        height: 800,
         alt: "Jhean Lamprecht — The Solutionist",
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Jhean Lamprecht — The Solutionist",
     description:
       "Senior IT Manager & Digital Transformation Leader. 14+ years turning impossible problems into elegant solutions.",
-    images: ["/og"],
+    images: ["/profile.jpg"],
   },
 };
 
