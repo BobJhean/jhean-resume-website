@@ -85,32 +85,22 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text */}
           <div>
-            {/* Logo */}
-            <div className="mb-8">
-              <Image
-                src="/logo.png"
-                alt="Jhean Lamprecht — The Solutionist"
-                width={320}
-                height={213}
-                className="w-full max-w-[500px] h-auto"
-                priority
-              />
-            </div>
-
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00d4ff]/10 border border-[#00d4ff]/30 text-[#00d4ff] text-xs font-semibold mb-6 tracking-wider uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-[#00d4ff] animate-pulse" />
               Available for new opportunities
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
-              <span className="gradient-text">The Solutionist.</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-4">
+              <span className="text-white">The</span>
+              <br />
+              <span className="gradient-text">Solutionist.</span>
             </h1>
 
-            <p className="text-xl text-[#8892a4] mb-3 font-medium">
+            <p className="text-xl text-white font-semibold mb-1">Jhean Lamprecht</p>
+            <p className="text-[#8892a4] mb-1 font-medium">
               Senior IT Manager & Digital Transformation Leader
             </p>
             <p className="text-[#e8eaf0] text-lg mb-8 leading-relaxed max-w-lg">
-              Senior IT Manager & Digital Transformation Leader with{" "}
               <span className="text-[#00d4ff] font-semibold">14+ years</span>{" "}
               of turning impossible problems into elegant solutions. I don&apos;t
               fear change — I architect it.
