@@ -17,12 +17,12 @@ const siteUrl = "https://jhean-resume-website.vercel.app";
 export const metadata: Metadata = {
   title: "Jhean Lamprecht — The Solutionist",
   description:
-    "Senior IT Manager & Digital Transformation Leader. 14+ years turning complex problems into elegant solutions. Embracing change, driving results.",
+    "Technology Leadership · Architecture · Transformation. 14+ years turning complex problems into elegant solutions.",
   metadataBase: new URL(siteUrl),
   openGraph: {
-    title: "Jhean Lamprecht — The Solutionist",
+    title: "Jhean Lamprecht | The Solutionist",
     description:
-      "Senior IT Manager & Digital Transformation Leader. 14+ years turning impossible problems into elegant solutions. I don't fear change — I architect it.",
+      "Technology Leadership · Architecture · Transformation",
     url: siteUrl,
     siteName: "Jhean Lamprecht",
     images: [
@@ -30,16 +30,16 @@ export const metadata: Metadata = {
         url: "/og-banner.jpg",
         width: 1200,
         height: 628,
-        alt: "Jhean Lamprecht — The Solutionist | Blue Thought Technologies",
+        alt: "Jhean Lamprecht — The Solutionist",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jhean Lamprecht — The Solutionist",
+    title: "Jhean Lamprecht | The Solutionist",
     description:
-      "Senior IT Manager & Digital Transformation Leader. 14+ years turning impossible problems into elegant solutions.",
+      "Technology Leadership · Architecture · Transformation",
     images: ["/og-banner.jpg"],
   },
 };
