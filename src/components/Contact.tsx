@@ -6,9 +6,9 @@ export default function Contact() {
         <div className="text-[#00d4ff] text-sm font-semibold tracking-widest uppercase mb-4">
           Let&apos;s Work Together
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Got a Problem That Needs{" "}
-          <span className="gradient-text">Solving?</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+          Add an authentic Solutionist to the fold —{" "}
+          <span className="gradient-text">achieve your tech solution.</span>
         </h2>
         <p className="text-[#8892a4] text-lg mb-12 max-w-xl mx-auto">
           Whether it&apos;s a legacy system begging for transformation, a team

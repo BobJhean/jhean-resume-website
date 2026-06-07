@@ -67,8 +67,13 @@ export default function Why() {
           <div className="absolute inset-0 bg-gradient-to-br from-[#00d4ff]/5 to-[#7c3aed]/5 pointer-events-none" />
           <div className="relative">
             <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              That&apos;s exactly why I exist.
+            <p className="text-[#00d4ff] text-sm font-semibold tracking-widest uppercase mb-3">
+              The answer
+            </p>
+            <h3 className="text-2xl md:text-4xl font-bold text-white mb-3 leading-tight">
+              Add an authentic Solutionist to the fold
+              <br />
+              <span className="gradient-text">and achieve your tech solution.</span>
             </h3>
             <p className="text-[#8892a4] text-lg leading-relaxed max-w-2xl mx-auto mb-6">
               I don&apos;t just manage IT — I engineer reliability, build teams that
