@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import { site } from "@/lib/site";
 
 const links = [
   { label: "About", href: "#about" },
@@ -45,10 +46,11 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#contact"
+            href={site.cv}
+            download
             className="ml-2 px-4 py-2 rounded-full border border-[#00d4ff] text-[#00d4ff] text-sm font-semibold hover:bg-[#00d4ff]/10 transition-colors"
           >
-            Hire Me
+            Download CV
           </a>
         </nav>
 
@@ -83,6 +85,24 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
+          <div className="flex gap-3 pt-2">
+            <a
+              href={site.cv}
+              download
+              className="flex-1 text-center px-4 py-2 rounded-full border border-[#00d4ff] text-[#00d4ff] text-sm font-semibold"
+              onClick={() => setMenuOpen(false)}
+            >
+              Download CV
+            </a>
+            <a
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 text-center px-4 py-2 rounded-full border border-[#2a2f42] text-[#e8eaf0] text-sm font-semibold"
+            >
+              LinkedIn
+            </a>
+          </div>
         </div>
       )}
     </header>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { site } from "@/lib/site";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,6 +46,31 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: site.name,
+  jobTitle: site.role,
+  url: site.url,
+  email: `mailto:${site.email}`,
+  telephone: site.phone,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Johannesburg",
+    addressCountry: "ZA",
+  },
+  sameAs: [site.linkedin],
+  knowsAbout: [
+    "Digital Transformation",
+    "Database Administration",
+    "Oracle PL/SQL",
+    "Microservices Architecture",
+    "DevOps",
+    "Kubernetes",
+    "Team Leadership",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,7 +78,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="min-h-screen antialiased">{children}</body>
+      <body className="min-h-screen antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }

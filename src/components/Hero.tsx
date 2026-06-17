@@ -1,11 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import { site } from "@/lib/site";
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
+    // Respect users who prefer reduced motion — skip the animation entirely.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -124,16 +128,29 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4">
               <a
-                href="#experience"
+                href={site.cv}
+                download
                 className="px-6 py-3 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white font-semibold text-sm hover:opacity-90 transition-opacity glow"
+              >
+                Download CV
+              </a>
+              <a
+                href="#experience"
+                className="px-6 py-3 rounded-full border border-[#2a2f42] text-[#e8eaf0] font-semibold text-sm hover:border-[#00d4ff]/50 hover:text-[#00d4ff] transition-all"
               >
                 See My Work
               </a>
               <a
-                href="#contact"
-                className="px-6 py-3 rounded-full border border-[#2a2f42] text-[#e8eaf0] font-semibold text-sm hover:border-[#00d4ff]/50 hover:text-[#00d4ff] transition-all"
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn profile"
+                className="px-4 py-3 rounded-full border border-[#2a2f42] text-[#e8eaf0] font-semibold text-sm hover:border-[#00d4ff]/50 hover:text-[#00d4ff] transition-all inline-flex items-center gap-2"
               >
-                Get in Touch
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                </svg>
+                LinkedIn
               </a>
             </div>
           </div>
