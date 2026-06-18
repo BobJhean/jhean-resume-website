@@ -28,6 +28,14 @@ export async function generateMetadata({
       type: "article",
       publishedTime: post.date,
       url: `${site.url}/blog/${post.slug}`,
+      siteName: "Jhean Lamprecht",
+      images: [{ url: "/blog-og.jpg", width: 1200, height: 630, alt: post.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: ["/blog-og.jpg"],
     },
   };
 }

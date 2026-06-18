@@ -10,6 +10,22 @@ export const metadata: Metadata = {
   description:
     "Field notes on AI, software architecture, DevOps, and technology leadership from Jhean Lamprecht — practical, opinionated, and grounded in 14+ years of building real systems.",
   alternates: { canonical: `${site.url}/blog` },
+  openGraph: {
+    title: "Insights — Field Notes from The Solutionist",
+    description:
+      "Practical, opinionated thinking on AI, software architecture, DevOps, and technology leadership.",
+    url: `${site.url}/blog`,
+    siteName: "Jhean Lamprecht",
+    type: "website",
+    images: [{ url: "/blog-og.jpg", width: 1200, height: 630, alt: "Insights — The Solutionist" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Insights — Field Notes from The Solutionist",
+    description:
+      "Practical, opinionated thinking on AI, software architecture, DevOps, and technology leadership.",
+    images: ["/blog-og.jpg"],
+  },
 };
 
 export default function BlogIndex() {
