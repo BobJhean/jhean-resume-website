@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { site } from "@/lib/site";
+import DownloadDropdown from "./DownloadDropdown";
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -126,14 +127,8 @@ export default function Hero() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={site.cv}
-                download
-                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#00d4ff] to-[#7c3aed] text-white font-semibold text-sm hover:opacity-90 transition-opacity glow"
-              >
-                Download CV
-              </a>
+            <div className="flex flex-wrap gap-4 items-center">
+              <DownloadDropdown variant="solid" />
               <a
                 href="#experience"
                 className="px-6 py-3 rounded-full border border-[#2a2f42] text-[#e8eaf0] font-semibold text-sm hover:border-[#00d4ff]/50 hover:text-[#00d4ff] transition-all"

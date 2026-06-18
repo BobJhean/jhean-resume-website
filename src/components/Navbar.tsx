@@ -1,13 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
 import { site } from "@/lib/site";
+import DownloadDropdown from "./DownloadDropdown";
 
 const links = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Achievements", href: "#achievements" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Achievements", href: "/#achievements" },
+  { label: "Blog", href: "/blog" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -45,13 +47,9 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <a
-            href={site.cv}
-            download
-            className="ml-2 px-4 py-2 rounded-full border border-[#00d4ff] text-[#00d4ff] text-sm font-semibold hover:bg-[#00d4ff]/10 transition-colors"
-          >
-            Download CV
-          </a>
+          <div className="ml-2">
+            <DownloadDropdown variant="outline" />
+          </div>
         </nav>
 
         {/* Mobile toggle */}
@@ -85,20 +83,26 @@ export default function Navbar() {
               {l.label}
             </a>
           ))}
-          <div className="flex gap-3 pt-2">
-            <a
-              href={site.cv}
-              download
-              className="flex-1 text-center px-4 py-2 rounded-full border border-[#00d4ff] text-[#00d4ff] text-sm font-semibold"
-              onClick={() => setMenuOpen(false)}
-            >
-              Download CV
-            </a>
+          <div className="pt-2 border-t border-[#2a2f42] mt-1">
+            <div className="text-[#8892a4] text-xs uppercase tracking-wide mb-2">Download</div>
+            <div className="flex flex-col gap-2">
+              {site.downloads.map((d) => (
+                <a
+                  key={d.label}
+                  href={d.href}
+                  download
+                  className="flex items-center gap-2 text-[#e8eaf0] text-sm font-medium"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <span>{d.icon}</span> {d.label}
+                </a>
+              ))}
+            </div>
             <a
               href={site.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center px-4 py-2 rounded-full border border-[#2a2f42] text-[#e8eaf0] text-sm font-semibold"
+              className="mt-3 block text-center px-4 py-2 rounded-full border border-[#2a2f42] text-[#e8eaf0] text-sm font-semibold"
             >
               LinkedIn
             </a>

@@ -9,4 +9,24 @@ export const site = {
   location: "Johannesburg, South Africa",
   cv: "/Jhean-Lamprecht-CV.pdf",
   linkedin: "https://www.linkedin.com/in/jhean-lamprecht",
+  downloads: [
+    {
+      label: "CV",
+      description: "One-page snapshot",
+      href: "/Jhean-Lamprecht-CV.pdf",
+      icon: "📄",
+    },
+    {
+      label: "Full Resume",
+      description: "Complete career detail",
+      href: "/Jhean-Lamprecht-Resume.pdf",
+      icon: "📑",
+    },
+    {
+      label: "Executive Summary",
+      description: "Short, high-level overview",
+      href: "/Jhean-Lamprecht-Executive-Summary.pdf",
+      icon: "⭐",
+    },
+  ],
 };
