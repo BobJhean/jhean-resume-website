@@ -153,17 +153,17 @@ export default function Hero() {
           {/* Profile photo */}
           <div className="flex justify-center md:justify-end">
             <div className="relative">
-              {/* Decorative rings */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[#00d4ff] to-[#7c3aed] p-[2px] scale-110 opacity-20 blur-sm" />
-              <div className="absolute -inset-4 rounded-full border border-[#00d4ff]/20 animate-[spin_20s_linear_infinite]" />
-              <div className="absolute -inset-8 rounded-full border border-[#7c3aed]/10 animate-[spin_30s_linear_infinite_reverse]" />
+              {/* Decorative glow frames */}
+              <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-[#00d4ff] to-[#7c3aed] p-[2px] scale-105 opacity-25 blur-sm" />
+              <div className="absolute -inset-3 rounded-[2.5rem] border border-[#00d4ff]/20" />
+              <div className="absolute -inset-6 rounded-[3rem] border border-[#7c3aed]/10" />
 
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-[#00d4ff]/40">
+              <div className="relative w-60 md:w-72 aspect-[591/950] rounded-[2rem] overflow-hidden border-2 border-[#00d4ff]/40">
                 <Image
                   src="/profile.jpg"
                   alt="Jhean Lamprecht"
                   fill
-                  className="object-cover object-[center_12%]"
+                  className="object-cover"
                   priority
                 />
               </div>
