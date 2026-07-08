@@ -74,17 +74,25 @@ export default function Contact() {
               </div>
             </div>
 
-            <a
-              href={site.cv}
-              download
-              className="card-hover bg-gradient-to-r from-[#00d4ff]/10 to-[#7c3aed]/10 border border-[#00d4ff]/30 rounded-2xl p-5 flex items-center gap-4 hover:border-[#00d4ff] transition-colors group"
-            >
-              <div className="text-2xl">📄</div>
-              <div>
-                <div className="text-[#00d4ff] text-xs uppercase tracking-wide font-semibold">Download</div>
-                <div className="text-white text-sm font-medium">Full CV (PDF)</div>
+            <div className="bg-gradient-to-r from-[#00d4ff]/10 to-[#7c3aed]/10 border border-[#00d4ff]/30 rounded-2xl p-5">
+              <div className="text-[#00d4ff] text-xs uppercase tracking-wide font-semibold mb-3">
+                Downloads
               </div>
-            </a>
+              <div className="flex flex-col gap-2.5">
+                {site.downloads.map((d) => (
+                  <a
+                    key={d.label}
+                    href={d.href}
+                    download
+                    className="flex items-center gap-3 text-white text-sm font-medium hover:text-[#00d4ff] transition-colors group"
+                  >
+                    <span>{d.icon}</span>
+                    <span>{d.label}</span>
+                    <span className="text-[#8892a4] text-xs font-normal">— {d.description}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Right — message form */}

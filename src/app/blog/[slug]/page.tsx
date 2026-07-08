@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { posts, getPost } from "@/lib/posts";
+import { posts, getPost, readingTime } from "@/lib/posts";
 import { site } from "@/lib/site";
 
 export function generateStaticParams() {
@@ -84,6 +84,7 @@ export default async function BlogPost({
               {post.category}
             </span>
             <span className="text-[#8892a4] text-sm">{post.displayDate}</span>
+            <span className="text-[#8892a4] text-sm">· {readingTime(post)} min read</span>
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-8">

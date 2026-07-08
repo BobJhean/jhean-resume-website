@@ -163,7 +163,7 @@ export default function Hero() {
                   src="/profile.jpg"
                   alt="Jhean Lamprecht"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[center_12%]"
                   priority
                 />
               </div>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { posts } from "@/lib/posts";
+import BlogList from "@/components/BlogList";
+import { posts, readingTime, categoryGroup } from "@/lib/posts";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -29,13 +29,23 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndex() {
+  const meta = posts.map((p) => ({
+    slug: p.slug,
+    title: p.title,
+    category: p.category,
+    group: categoryGroup(p.category),
+    displayDate: p.displayDate,
+    excerpt: p.excerpt,
+    readMins: readingTime(p),
+  }));
+
   return (
     <>
       <Navbar />
       <main className="pt-32 pb-24 min-h-screen grid-bg">
         <div className="max-w-5xl mx-auto px-6">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="text-[#00d4ff] text-sm font-semibold tracking-widest uppercase mb-4">
               Insights
             </div>
@@ -50,33 +60,7 @@ export default function BlogIndex() {
             </p>
           </div>
 
-          {/* Posts */}
-          <div className="grid md:grid-cols-2 gap-6">
-            {posts.map((p) => (
-              <Link
-                key={p.slug}
-                href={`/blog/${p.slug}`}
-                className="card-hover group bg-[#12151e] border border-[#2a2f42] rounded-2xl p-6 flex flex-col hover:border-[#00d4ff]/50 transition-colors"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-[#1a1f2e] text-[#00d4ff] border border-[#2a2f42]">
-                    {p.category}
-                  </span>
-                  <span className="text-[#8892a4] text-xs">{p.displayDate}</span>
-                </div>
-                <h2 className="text-white font-bold text-lg mb-2 leading-snug group-hover:text-[#00d4ff] transition-colors">
-                  {p.title}
-                </h2>
-                <p className="text-[#8892a4] text-sm leading-relaxed line-clamp-3">
-                  {p.excerpt}
-                </p>
-                <span className="mt-4 text-[#00d4ff] text-sm font-semibold inline-flex items-center gap-1">
-                  Read
-                  <span className="group-hover:translate-x-1 transition-transform">→</span>
-                </span>
-              </Link>
-            ))}
-          </div>
+          <BlogList posts={meta} />
         </div>
       </main>
       <Footer />

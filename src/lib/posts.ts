@@ -1120,3 +1120,18 @@ export const posts: Post[] = [
 export function getPost(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug);
 }
+
+export function readingTime(post: Post): number {
+  const words = post.content.join(" ").split(/\s+/).length;
+  return Math.max(1, Math.round(words / 220));
+}
+
+export function categoryGroup(category: string): string {
+  const c = category.toLowerCase();
+  if (/\bai\b/.test(c)) return "AI";
+  if (c.includes("architecture") || c.includes("cloud")) return "Architecture";
+  if (c.includes("development") || c.includes("engineering") || c.includes("devops") || c.includes("software")) return "Engineering";
+  if (c.includes("prediction")) return "Predictions";
+  if (c.includes("business")) return "Business";
+  return "Technology";
+}
